@@ -1,0 +1,31 @@
+what should i do
+
+
+tell me 
+
+ok lets face it
+
+split first and parse
+
+get input as char *s >> split(' ')
+
+grammar in bash
+
+<string arg>	:: <quote> ... .. .. . (can parse) .. . <close quote>
+<cmd>			:: <cmd name(string)> <arg..>..{filename, flag (can parse)}
+<redir>			:: (optional<num> || &[nospace])<redir op>([nospace]> || [nospace]&{1.. 255}) || "filename") back part always required
+<$parser>		:: $asdjkl || $(ls | jakf j)  | $ | * | >> can check after
+
+<quote> hungriest
+<redir> secound
+other operation () condition type : runin child process;
+other operation || condition save as arg "||" cmd == || save to local var
+other operation && condition save as arg "&&" cmd == && save to local var
+other operation |  nocondition seperate by list as pipe
+
+
+-- other operation $() if saw it << no need to do
+
+args : quote inside outside
+
+cmd : command that left from another thing

@@ -1,0 +1,18 @@
+ ls | (ls || ls) || ((ls) && (ls | ls))
+
+ 
+ exec_set(exec(ls)) -> exec_set(exec_set(exec(ls)) -> exec_set(exec_set(exec(ls))))-> (exec_set(exec_set(exec(ls)-> exec_set(exec(ls) -> exec(ls)))))
+
+
+exec_set(0) ->exec_set(1) condition(|) -------------> exec_set(2) condition(||)
+              |	                                                  |
+			                                                      V
+              V
+    exec_set(child 1) -> exec next                    exec_set(child 1) -> exec_set->(child 1) -> exec_set(exec_ls)
+              |                                                   |
+              V                                                   V
+    exec_set(child 2) -> exec next   condition(||)    exec_set(child 2) -> exec_set(child 1) -> exec_set(ls)-> exec_set(ls) condition(|)
+
+
+
+ls |
